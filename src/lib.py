@@ -4,7 +4,16 @@ import asgi
 from fastapi import FastAPI
 from jinja2 import DictLoader, Environment, TemplateNotFound, select_autoescape
 from js import URL as JSURL, Request as JSRequest  # type: ignore
+from starlette.middleware.base import BaseHTTPMiddleware
 from workers import Response, WorkerEntrypoint
+
+
+class SecurityHeadersMiddleware(BaseHTTPMiddleware):
+    async def dispatch(self, request, call_next):
+        response = await call_next(request)
+        response.headers["Cross-Origin-Embedder-Policy"] = "credentialless"
+        response.headers["Cross-Origin-Resource-Policy"] = "cross-origin"
+        return response
 
 
 class Default(WorkerEntrypoint):
@@ -20,6 +29,7 @@ class Default(WorkerEntrypoint):
 
 
 app = FastAPI(debug=True)
+app.add_middleware(SecurityHeadersMiddleware)
 
 _TEMPLATE_STRINGS: dict[str, str] = {}
 _jinja = Environment(
