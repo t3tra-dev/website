@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% set title = "Projects" %}
+
+{% block content %}
+<h2>作っているもの</h2>
+<p>
+  私が作っているプロジェクトのうち幾つかを紹介します。<br>
+  どれも中途半端なものばかりですが、興味があれば見てみてください。
+</p>
+
+<ul>
+  <li>
+    <a href="https://github.com/t3tra-dev/lython">Lython</a>:
+    今一番気合を入れて進めているプロジェクト。実験的なLLVMベースのPythonコンパイラ。開発の過程は Zenn の方で記事としてまとめています。
+  </li>
+  <li>
+    <a href="https://github.com/t3tra-dev/MoZuku">MoZuku</a>:
+    MeCab / CaboCha を用いた日本語文章のハイライト・校正を行う LSP サーバーの実装と各エディタ向けクライアントプラグイン群。
+  </li>
+  <li>
+    <a href="https://github.com/t3tra-dev/waveoptics">waveoptics</a>:
+    ブラウザ上で動作する波動光学シミュレータ。JavaScript と GLSL (WebGL2) で実装されています。
+  </li>
+  <li>
+    <a href="https://github.com/t3tra-dev/jvm-pybind">jvm-pybind</a>:
+    Python から Java の資産をシームレスに利用するためのバインディングライブラリ。
+  </li>
+  <li>
+    <a href="https://github.com/t3tra-dev/synthv-types">synthv-types</a>:
+    JavaScript で Synthesizer V Studio のスクリプトを作成するための型定義コレクション。
+  </li>
+  <li>
+    <a href="https://github.com/t3tra-dev/cve-2025-29927-demo">cve-2025-29927-demo</a>:
+    Next.js における認可バイパスの脆弱性 (CVE-2025-29927) を検証できる簡易な web アプリケーションの実装。
+  </li>
+</ul>
+
+<p>
+  こちらには私が貢献したオープンソースプロジェクトも載せておきます。
+</p>
+<ul>
+  <li>
+    <a href="https://github.com/Rapptz/discord.py">Rapptz/discord.py</a>:
+    日本語リファレンスの翻訳を進めています。
+  </li>
+  <li>
+    <a href="https://github.com/systemd/systemd">systemd/systemd</a>:
+    日本語言語ファイルの表記揺れや誤字脱字を修正しました。
+  </li>
+  <li>
+    <a href="https://github.com/microsoft/markitdown">microsoft/markitdown</a>:
+    初期段階で大規模なリファクタリングを提案し、v0.1.0a1 に含まれました。また、ExifTool に起因する脆弱性の発見と修正を行いました。
+  </li>
+</ul>
+{% endblock %}

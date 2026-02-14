@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% set title = "Home" %}
+
+{% block content %}
+<div>
+  <h2>404 Not Found</h2>
+  <p>お探しのページは見つかりませんでした。</p>
+
+  <div style="text-align: center;">
+    <a href="https://http.cat" target="_blank" rel="noopener noreferrer">
+      <img src="https://http.cat/images/404.jpg" alt="404 Not Found - http cat">
+    </a>
+  </div>
+
+  <p style="text-align: center; margin-top: 8px;"><a href="/"><b>ホームに戻る</b></a></p>
+</div>
+
+<style>
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+</style>
+{% endblock %}

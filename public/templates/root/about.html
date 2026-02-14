@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% set title = "About" %}
+
+{% block content %}
+<h2>私について</h2>
+<p>
+  はじめまして！t3tra です<br><br>
+  主にはコード書いて技術屋さん的なことをしている<br>
+  たまにアナログで絵描いたり DTM (Studio One 7, Synth V) したり<br>
+  フィーリングで集合論とか型理論とかを嗜む<br>
+  好きなプログラミング言語は C と Python
+</p>
+
+<h3>プロフィール</h3>
+<p>
+  <ul>
+    <li>生年月日: 2007/06/20 (<a href="https://hololive.hololivepro.com/en/talents/gawr-gura/" target="_blank" rel="noopener noreferrer"><b>Gawr Gura</b></a> さんと同じ誕生日って友達から教えてもらった)</li>
+    <li>肩書き: Contributing Member @ <a href="https://www.python.org/psf-landing/" target="_blank" rel="noopener noreferrer"><b>Python Software Foundation</b></a> (Python ソフトウェア財団)</li>
+    <li>資格: 死角ですか？特にありません、無敵です</li>
+    <li>所在地: 関東地方 一人暮らしを始めてはや1年</li>
+  </ul>
+  生まれも育ちも日本ですがハーフです<br>
+  日本語と英語と中国語がちょっとずつできる<br>
+  今んとこ高校3年生 (18歳)
+</p>
+
+<h3>興味</h3>
+<p>
+  計算機科学・数理論理学・計算可能性理論・遺伝工学・生物情報科学・量子情報科学・宇宙科学・ロボティクス・セキュリティ
+</p>
+
+<h3>スキル</h3>
+<blockquote>
+  <p>何でもは出来ないわ、出来ることだけよ。</p>
+</blockquote>
+<div>
+  <p><b>プログラミング言語:</b></p>
+  <p>Python3・C/C++・HTML/CSS・JavaScript/TypeScript・Agda・Coq (Rocq Prover)・Swift・Scala3</p>
+  <p><b>ライブラリ/フレームワーク:</b></p>
+  <p>Flask・FastAPI・Jinja2・Pydantic・React・Astro・Next.js・Hono・shadcn/ui・Bootstrap・jQuery・Mermaid・Three.js・SwiftUI・OpenGL・SPIR-V・LLVM/MLIR・llvmlite・Tcl/Tk・Qt・OpenCV・Cubical Agda・pybind11/nanobind・PyO3/Maturin・Qiskit・libei (Erlang/OTP)・libjvm (JDK)・Mathematica (Wolfram Engine)・Boehm GC・BLAS/LAPACK・NumPy・SymPy・SciPy・Matplotlib・MediaPipe・ImGUI・pwntools・boto3・SQLAlchemy・pytest・googletest・just・Sphinx・MkDocs・MathJax・react-scan・Pyodide・discord.py</p>
+  <p><b>ツール類:</b></p>
+  <p>Git・macOS・Linux・Visual Studio Code・Wrangler (Cloudflare Workers CLI)・uv・Ruff・pyright・Homebrew・FFmpeg・CMake・Ninja・Clang・objdump・LLDB・Radare2・Ghidra・CyberChef・Metasploit Framework・Slurm・Terraform・Kubernetes・Redis・systemd・hyperfine・NodeJS・Deno・Bun</p>
+</div>
+
+<h3>自分語りと余談</h3>
+<div>
+  <p>
+    プログラミングを学び始めたきっかけは小学4年生の頃に本で Python の存在を知ったことなのですが、当時は受験勉強もあり中々取り組めていなかったんですよね。勿論それで得た知識技能は今でも役に立っているので一概に悪くは言えませんが。<br>
+    ちなみに当時はバスケットボール・水泳・器械体操を習っていたものの、どうにも想像できないみたいでこの話をするとよく驚かれます。結構運動できるんですよ。<br><br>
+    受験後、中高一貫校に進学しましたが、そこでも寮生活の都合上殆ど電子機器に触れられず書籍を用い「紙とペンでプログラミングをしていた」話は一生擦っています。
+    最近やっていることからはあまり想像できないかもしれませんが、部活動ではロボットを作ったりしていました。なのでロボティクスにも興味があったり。<br>限られた環境の中で LiDAR 擬きを作り無双した話とか色々あるんですがここで書くには余白が足りないので割愛。<br><br>
+    高校1年の終わりに寮生活や学業のストレスから転校を決め、編入試験を経て現在の学校に移りました (ここで学歴コンプレックスを拗らせる)。<br>
+    そこから本格的にプログラミング (というか実際にキーボードを打ちコードを書くこと) を始め、現在に至ります。
+  </p>
+  <br>
+  <p>
+    ちなみに、このサイトは FastAPI + Jinja2 で構築されており、ホスティングには Cloudflare Workers (Beta: Python Runtime) を利用しています。<br>
+    HTML/CSSは手書きのもので、UIフレームワーク等は使用しておりません。JavaScriptも不使用です。<br><br>
+    いつか BBS も実装したいなぁ、私のインターネット史の始まりは掲示板だったし。
+  </p>
+</div>
+{% endblock %}

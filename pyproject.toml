@@ -1,0 +1,39 @@
+[project]
+name = "website"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["fastapi", "jinja2>=3.1.6", "webtypy"]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.15.0",
+    "workers-py",
+]
+
+[tool.ruff]
+line-length = 120
+exclude = [
+    ".venv/",
+    ".venv-workers/",
+    "wrangler/",
+    "node_modules/",
+    "python_modules/",
+    "build/",
+    "dist/",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+section-order = [
+  "future",
+  "standard-library",
+  "third-party",
+  "first-party",
+  "local-folder",
+]
+split-on-trailing-comma = true
