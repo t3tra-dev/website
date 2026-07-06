@@ -12,7 +12,7 @@
 <ul>
   <li>
     <a href="https://github.com/t3tra-dev/lython">Lython</a>:
-    今一番気合を入れて進めているプロジェクト。実験的なLLVMベースのPythonコンパイラ。開発の過程は Zenn の方で記事としてまとめています。
+    今一番気合を入れて進めているプロジェクト。実験的な <a href="https://llvm.org/">LLVM</a> / <a href="https://mlir.llvm.org/">MLIR</a> ベースのPythonコンパイラ。開発の過程は Zenn の方で記事としてまとめています。
   </li>
   <li>
     <a href="https://github.com/t3tra-dev/MoZuku">MoZuku</a>:
@@ -27,12 +27,16 @@
     Python から Java の資産をシームレスに利用するためのバインディングライブラリ。
   </li>
   <li>
+    <a href="https://github.com/t3tra-dev/v8-python">v8-python</a>:
+    Python から V8 JavaScript エンジンを利用するためのバインディングライブラリ。denoland/rusty_v8 を PyO3 経由で安全に提供しています。
+  </li>
+  <li>
     <a href="https://github.com/t3tra-dev/synthv-types">synthv-types</a>:
     JavaScript で Synthesizer V Studio のスクリプトを作成するための型定義コレクション。
   </li>
   <li>
     <a href="https://github.com/t3tra-dev/bfjit">bfjit</a>:
-    x86_64 と arm64 向けの Brainf_ck JIT compiler。
+    x86_64 と arm64 向けの Brainf_ck JIT コンパイラ。LLVM を使わずにアセンブリを直接吐くことで、LLVM のオーバーヘッドを回避しつつ高速な実行を実現しています。
   </li>
   <li>
     <a href="https://github.com/t3tra-dev/edgekit">edgekit</a>:
@@ -41,6 +45,22 @@
   <li>
     <a href="https://github.com/t3tra-dev/pyodide-playground">pyodide-playground</a>:
     ブラウザ上でローカルに完結する Python 関連技術を色々試せるプレイグラウンド。Pyodide による Python 実行環境, micropip による外部パッケージのロード, ty_wasm による言語サーバー。matplotlib の WebAgg バックエンドと実験的な SDL バックエンドをサポート。
+  </li>
+  <li>
+    <a href="https://github.com/t3tra-dev/tcp-ip">tcp-ip</a>:
+    TCP/IP プロトコルスタックの実装。Python を用いてネットワークドライバから実装しています。
+  </li>
+  <li>
+    <a href="https://github.com/t3tra-dev/x11.wasm">x11.wasm</a>:
+    WebAssembly を用いてブラウザ上に移植された libX11 の実装です。
+  </li>
+  <li>
+    <a href="https://github.com/t3tra-dev/tcltk.wasm">tcltk.wasm</a>:
+    x11.wasm を利用してブラウザ上に移植された Tcl/Tk の実装です。
+  </li>
+  <li>
+    <a href="https://github.com/t3tra-dev/zerocast">zerocast</a>:
+    [joke] 史上最高の圧縮効率を誇る圧縮アルゴリズムの C による実装です。
   </li>
 </ul>
 
@@ -59,6 +79,10 @@
   <li>
     <a href="https://github.com/microsoft/markitdown">microsoft/markitdown</a>:
     初期段階で大規模なリファクタリングを提案し、v0.1.0a1 に含まれました。また、ExifTool に起因する脆弱性の発見と修正を行いました。
+  </li>
+  <li>
+    <a href="https://github.com/cloudflare/vinext">cloudflare/vinext</a>:
+    Middleware bypass, CSRF validation bypass の脆弱性を発見、HackerOne 経由での報告を行いました。計 2 件の脆弱性報告が受理され、$1,500 の報奨金を頂きました。まだ公開/修正されていない pending bounty も 1 件あります。
   </li>
 </ul>
 {% endblock %}
