@@ -5,6 +5,7 @@ from fastapi import FastAPI
 from jinja2 import DictLoader, Environment, TemplateNotFound, select_autoescape
 from js import URL as JSURL, Request as JSRequest  # type: ignore
 from starlette.middleware.base import BaseHTTPMiddleware
+from starlette.responses import HTMLResponse
 from workers import Response, WorkerEntrypoint
 
 
@@ -14,6 +15,17 @@ class SecurityHeadersMiddleware(BaseHTTPMiddleware):
         response.headers["Cross-Origin-Embedder-Policy"] = "credentialless"
         response.headers["Cross-Origin-Resource-Policy"] = "cross-origin"
         return response
+
+
+class TeapotMiddleware(BaseHTTPMiddleware):
+    async def dispatch(self, request, call_next):
+        if (
+            any(k.casefold() == "teapot" and v.casefold() == "coffee" for k, v in request.query_params.items())
+            or any(v.lower() == "coffee" for v in request.headers.getlist("teapot"))
+        ):
+            return HTMLResponse(await render_template("error/418.html"), status_code=418)
+        else:
+            return await call_next(request)
 
 
 class Default(WorkerEntrypoint):
@@ -30,6 +42,7 @@ class Default(WorkerEntrypoint):
 
 app = FastAPI(debug=True)
 app.add_middleware(SecurityHeadersMiddleware)
+app.add_middleware(TeapotMiddleware)
 
 _TEMPLATE_STRINGS: dict[str, str] = {}
 _jinja = Environment(
